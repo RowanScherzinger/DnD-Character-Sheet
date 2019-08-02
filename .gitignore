@@ -5,8 +5,8 @@ package-lock.json
 *.css
 *.js
 
+# Folder Exceptions
 !App/data/**/*
-
 
 # Node modules
 node_modules
