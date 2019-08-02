@@ -1,17 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="./main.css"/>
-    </head>
-    <body>
-        <header>
-            <p>Header stuff</p>
-        </header>
-        {{character-sheet}}
-        {{inventory}}
-        {{spell-book}}
-        <footer>
-            <p>Footer stuff</p>
-        </footer>
-    </body>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./scripts/swiper/swiper.min.css">
+
+    <style>
+        .swiper-container {
+            width: 595px;
+            height: 842px;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+            width: auto;
+            height: auto;
+            display: block;
+            border-radius: 0;
+            opacity: 1;
+            margin-bottom: 1rem;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 130%;
+            height: 100%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-slide div {
+            background: white;
+            height: 100%;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div data-page-title="Character" class="swiper-slide">
+                    <div>{{character-sheet}}</div>
+                </div>
+                <div data-page-title="Inventory" class="swiper-slide">
+                    <div>{{spell-book}}</div>
+                </div>
+                <div data-page-title="Spellbook" class="swiper-slide">
+                    <div>{{inventory}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--<div class="parallax-bg" style="background-image:url(http://lorempixel.com/900/600/nightlife/2/)" data-swiper-parallax="-23%"></div>-->
+
+    <script src="./scripts/swiper/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: '1',
+            //parallax: true,
+            spaceBetween: 100,
+
+            pagination: {
+                el: '.swiper-pagination',
+                zoom: true,
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + document.getElementsByClassName("swiper-slide")[index].getAttribute("data-page-title") + '</span>';
+                    //return '<span class="' + className + '">' + document.querySelectorAll("[data-swiper-slide-index='" + index + "']").getAttribute("data-page-title") + '</span>';
+                }
+            }
+        })
+    </script>
+</body>
 </html>
