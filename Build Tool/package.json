@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rowan scherziner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^12.6.9",
+    "minimist": "^1.2.0",
+    "typescript": "^3.5.1"
+  }
 }
