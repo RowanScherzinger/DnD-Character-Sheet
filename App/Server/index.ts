@@ -18,6 +18,9 @@ export class ExpressServer
 
     private startServer(): void
     {
+        app.use(express.static('../data'));
+        app.use(express.static('../styling'));
+
         app.get('/', (req: express.Request, res: express.Response) => {
             res.send(this.builder.buildPage());
         });
