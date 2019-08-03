@@ -1,7 +1,6 @@
 @import "vars.scss";
 
-@import "character-sheet.scss";
-@import "swiper.scss";
+@import "pages.scss";
 
 body {
   background-color: $black;
@@ -9,4 +8,7 @@ body {
 }
 
 main {
+    height: $main-height;
+    width: 100%;
+    overflow: auto;
 }

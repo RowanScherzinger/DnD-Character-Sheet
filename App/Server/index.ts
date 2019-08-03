@@ -24,7 +24,6 @@ export class ExpressServer
         }));
 
         app.get('/', (req: express.Request, res: express.Response) => {
-            console.log("get req");
             res.send(this.builder.buildPage());
         });
 

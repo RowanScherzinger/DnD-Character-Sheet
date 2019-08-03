@@ -5,30 +5,17 @@
 <head>
     <meta charset="utf-8" />
     <title>Character Sheet</title>
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-    <div>
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div data-page-title="Character" class="swiper-slide">
-                    {{character-sheet}}
-                </div>
-                <div data-page-title="Inventory" class="swiper-slide">
-                    {{spell-book}}
-                </div>
-                <div data-page-title="Spellbook" class="swiper-slide">
-                    {{inventory}}
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-
-    <script src="./scripts/swiper/swiper.min.js"></script>
-    <script src="./scripts/swiper/customSwiper.js"> </script>
+    [[header]]
+    <main>
+        {{character-sheet}}
+        {{spell-book}}
+        {{inventory}}
+    </main>
+    [[footer]]
 </body>
-<link rel="stylesheet" href="./scripts/swiper/swiper.min.css">
-<link rel="stylesheet" href="./main.css" />
 
 </html>

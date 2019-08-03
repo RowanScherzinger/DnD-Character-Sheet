@@ -27,11 +27,16 @@ export class PageBuilder
     {
         let final: string = fs.readFileSync(this.indexPath, this.fileEncoding);
 
-        const tags: string[] = final.match(/{{[a-z-]*}}/g);
-
-        for (const tag of tags)
+        const pageTags: string[] = final.match(/{{[a-z-]*}}/g);
+        for (const tag of pageTags)
         {
             final = final.replace(tag, this.getPage(tag.replace("{{", "").replace("}}", "")));    
+        }
+
+        const compTags: string[] = final.match(/\[\[[a-z-]*\]\]/g);
+        for (const tag of compTags)
+        {
+            final = final.replace(tag, this.getComponent(tag.replace("[[", "").replace("]]", "")));    
         }
 
         return final;

@@ -1,3 +1,9 @@
+// Sizes
+$header-height: 20px;
+$footer-height: 20px;
+$main-height: calc(100vh - (#{$header-height} + #{$footer-height * 2}));
+
+// Colors
 $white: #eaeaea;
 $red: #cf2d2d;
 $black: #333333;

@@ -1,0 +1,9 @@
+.page {
+    width: 100%;
+    background-color: $white;
+    color: $black;
+}
+
+@import "character-sheet.scss";
+@import "inventory.scss";
+@import "spell-book.scss";
