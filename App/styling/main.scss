@@ -1,7 +1,12 @@
 @import "vars.scss";
 
 @import "character-sheet.scss";
+@import "swiper.scss";
 
 body {
-    background-color: $black;
+  background-color: $black;
+  color: $white;
+}
+
+main {
 }
