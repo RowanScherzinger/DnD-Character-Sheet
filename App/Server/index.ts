@@ -19,9 +19,12 @@ export class ExpressServer
     private startServer(): void
     {
         app.use(express.static('../data'));
-        app.use(express.static('../'));
+        app.use(express.static('../', {
+            index: false
+        }));
 
         app.get('/', (req: express.Request, res: express.Response) => {
+            console.log("get req");
             res.send(this.builder.buildPage());
         });
 
