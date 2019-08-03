@@ -1,0 +1,38 @@
+.swiper-container {
+    width: 595px;
+    height: 842px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide div {
+    background: white;
+    height: 100%;
+    padding: 1rem;
+}
