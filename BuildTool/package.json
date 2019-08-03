@@ -10,8 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/minimist": "^1.2.0",
+    "@types/ncp": "^2.0.1",
     "@types/node": "^12.6.9",
     "minimist": "^1.2.0",
+    "ncp": "^2.0.0",
+    "path": "^0.12.7",
+    "rimraf": "^2.6.3",
     "typescript": "^3.5.1"
   }
 }

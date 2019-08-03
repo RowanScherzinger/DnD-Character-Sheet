@@ -12,7 +12,7 @@ export class ExpressServer
         if (port !== undefined)
             this.port = port;
 
-        this.builder = new PageBuilder();
+        this.builder = new PageBuilder("../");
         this.startServer();
     }
 

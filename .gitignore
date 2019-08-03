@@ -1,8 +1,12 @@
 # Files
 package-lock.json
 
+# Folders
+build/
+
 # File types
 *.css
+*.css.map
 *.js
 
 # Folder Exceptions
