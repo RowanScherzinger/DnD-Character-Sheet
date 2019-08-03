@@ -48,7 +48,7 @@ export class BuildTool
         }
 
         console.log("Building index.html");
-        fs.writeFileSync(path.join(this.buildRoot, this.html), this.buildHTML(path.join(this.appRoot, this.html)));
+        fs.writeFileSync(path.join(this.buildRoot, this.html), this.buildHTML());
 
         console.log("Copying main.css");
         fs.copyFileSync(path.join(this.appRoot, this.css), path.join(this.buildRoot, this.css));
@@ -56,7 +56,7 @@ export class BuildTool
         this.doneCallback();
     }
 
-    private buildHTML(indexPath: string): string
+    private buildHTML(): string
     {
         const builder: PageBuilder = new PageBuilder(this.appRoot);
         return builder.buildPage();
