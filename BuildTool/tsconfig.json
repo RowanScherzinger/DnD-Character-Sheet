@@ -2,9 +2,9 @@
     "compileOnSave": true,
     "compilerOptions": {
         "target": "es5",
-        "types" : ["node", "express"]
+        "lib": ["es2015"]
     },
     "include": [
-        "*/*.ts"
+        "./**/*.ts"
     ]
 }
