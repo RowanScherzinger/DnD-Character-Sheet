@@ -14,3 +14,15 @@ var mySwiper = new Swiper('.swiper-container', {
         }
     }
 })
+
+var inputElements = document.getElementsByTagName("input");
+for (const elem of inputElements)
+{
+    elem.onfocus = () => {
+        mySwiper.allowTouchMove = false;
+    };
+
+    elem.onblur = () => {
+        mySwiper.allowTouchMove = true;
+    }
+}
