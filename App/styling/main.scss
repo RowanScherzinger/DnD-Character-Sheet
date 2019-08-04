@@ -2,15 +2,53 @@
 
 @import "pages.scss";
 
+@font-face {
+  font-family: "Main";
+  src: url("../data/fonts/VTCGoblinHand.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Main";
+  src: url("../data/fonts/VTCGoblinHandBold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Main";
+  src: url("../data/fonts/VTCGoblinHandItalic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Main";
+  src: url("../data/fonts/VTCGoblinHandSC.ttf");
+  font-stretch: semi-condensed;
+}
+
 body {
   background-color: $black;
   color: $white;
+  font-family: "Main";
 }
 
+
 main {
-    height: $main-height;
-    width: 100%;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input,
+button {
+  font-family: "Main";
+}
+
+input {
+  background: none;
+  color: unset;
+  border: none;
+  border-bottom: 1px solid $white;
 }

@@ -1,31 +1,88 @@
 #character-sheet {
-    #name {
-        display: flex;
-        height: 30px;
+	display: flex;
+	flex-direction: column;
 
-        padding-left: 10px;
-    }
+	#head-stats {
+		display: flex;
+		justify-content: space-between;
+		#name {
+			height: 30px;
+			padding-left: 10px;
+		}
+	}
 
-    .stat-card {
-        display: flex;
-        flex-direction: column;
+	#main-stats {
+		display: flex;
+		background-color: #77aa77aa;
 
-        .stat-head {
-            h1 {
-                font-size: 18pt;
-            }
+        .column {
+			flex: 1;
         }
-        .stats {
-            display: flex;
 
-            .left {
-                width: 33%;
-                .base {
-                    width: 30px;
-                    height: 30px;
-                    text-align: center;
-                }
-            }
-        }
-    }
+		#core-stats {
+			background-color: #7777aaaa;
+			.stat-card {
+				display: flex;
+				flex-direction: column;
+
+				.stat-head {
+					h1 {
+						font-size: 18pt;
+					}
+				}
+				.stats {
+					display: flex;
+
+					.left {
+						width: 33%;
+						max-width: 50px;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						text-align: center;
+
+						.base {
+							width: 30px;
+							height: 15px;
+							text-align: center;
+						}
+						.modifier {
+							font-size: 16pt;
+							font-weight: bold;
+						}
+					}
+
+					.right {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						padding: 3px;
+
+						div {
+							border-bottom: 1px solid $white;
+							span {
+								display: inline-block;
+								text-align: right;
+                                min-width: 30px;
+                                margin-top: 2px;
+                                margin-bottom: 2px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#aux-stats {
+			background-color: #aa7777aa;
+			.stat {
+				.stat-value {
+					width: 40px;
+					height: 25px;
+				}
+			}
+		}
+	}
 }
