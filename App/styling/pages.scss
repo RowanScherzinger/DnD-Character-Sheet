@@ -1,7 +1,10 @@
 .page {
-    width: 100%;
-    background-color: $white;
-    color: $black;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: $grey-dark;
+    color: $white;
+    padding: 10px;
 }
 
 @import "character-sheet.scss";

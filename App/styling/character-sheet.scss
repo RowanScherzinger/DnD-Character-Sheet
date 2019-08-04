@@ -1,3 +1,31 @@
 #character-sheet {
-    
+    #name {
+        display: flex;
+        height: 30px;
+
+        padding-left: 10px;
+    }
+
+    .stat-card {
+        display: flex;
+        flex-direction: column;
+
+        .stat-head {
+            h1 {
+                font-size: 18pt;
+            }
+        }
+        .stats {
+            display: flex;
+
+            .left {
+                width: 33%;
+                .base {
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

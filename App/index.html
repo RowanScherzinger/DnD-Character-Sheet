@@ -6,14 +6,21 @@
     <meta charset="utf-8" />
     <title>Character Sheet</title>
     <link rel="stylesheet" href="./main.css" />
+    <script>
+        setTimeout(() => {location.reload()}, 5000);
+    </script>
 </head>
 
 <body>
     [[header]]
     <main>
+        <hr/>
         {{character-sheet}}
-        {{spell-book}}
+        <hr/>
         {{inventory}}
+        <hr/>
+        {{spell-book}}
+        <hr/>
     </main>
     [[footer]]
 </body>
