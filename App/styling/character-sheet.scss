@@ -13,14 +13,12 @@
 
 	#main-stats {
 		display: flex;
-		background-color: #77aa77aa;
 
         .column {
 			flex: 1;
         }
 
 		#core-stats {
-			background-color: #7777aaaa;
 			.stat-card {
 				display: flex;
 				flex-direction: column;
@@ -76,7 +74,6 @@
 		}
 
 		#aux-stats {
-			background-color: #aa7777aa;
 			.stat {
 				.stat-value {
 					width: 40px;
