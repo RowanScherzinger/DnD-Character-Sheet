@@ -1,3 +1,101 @@
 #spell-book {
-    
+	display: flex;
+	flex-direction: column;
+
+	#head-spells {
+		width: 100%;
+
+		#spell-slots {
+			.head {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				button {
+					height: 40px;
+					color: $red-dark;
+				}
+				button:hover {
+					height: 40px;
+					background-color: $red-dark;
+					color: $white;
+				}
+			}
+
+			#slots {
+				display: flex;
+				justify-content: space-around;
+				.number-input {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+					min-width: 60px;
+					width: 100%;
+					height: 140px;
+					border: 1px solid white;
+
+					button {
+						width: 100%;
+						height: 25%;
+						margin: 0px;
+						font-weight: bold;
+						font-size: 1.2em;
+						color: $white;
+					}
+
+                    button.inc {
+                        border-top-left-radius: 0px;
+						border-top-left-radius: 0px;
+                    }
+
+                    button.dec {
+                        border-bottom-left-radius: 0px;
+						border-bottom-left-radius: 0px;
+                    }
+
+					button.inc:active {
+						transform: translateY(1px);
+						
+					}
+
+					button.dec:active {
+						transform: translateY(-1px);
+						
+					}
+
+					p,
+					label {
+						display: flex;
+						justify-content: center;
+						align-content: center;
+						align-items: center;
+						width: 100%;
+						height: 25%;
+						padding: 0px;
+						margin: 0px;
+						text-align: center;
+						font-weight: bold;
+					}
+					.max-value {
+						display: flex;
+						justify-content: space-around;
+						width: 100%;
+						input[type="number"] {
+							width: 30px;
+							text-align: center;
+						}
+						input[type="number"] {
+							-webkit-appearance: textfield;
+							-moz-appearance: textfield;
+							appearance: textfield;
+						}
+						input[type="number"]::-webkit-inner-spin-button,
+						input[type="number"]::-webkit-outer-spin-button {
+							-webkit-appearance: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }

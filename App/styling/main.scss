@@ -3,32 +3,52 @@
 @import "pages.scss";
 
 @font-face {
-  font-family: "Main";
-  src: url("../data/fonts/Helvetica.ttf");
+	font-family: "Main";
+	src: url("../data/fonts/Helvetica.ttf");
 }
 
 body {
-  background-color: $black;
-  color: $white;
-  font-family: "Main";
+	background-color: $black;
+	color: $white;
+	font-family: "Main";
 }
 
-
 main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 input,
 button {
-  font-family: "Main";
+	font-family: "Main";
+	background: none;
+	border: none;
 }
 
 input {
-  background: none;
-  color: unset;
-  border: none;
-  border-bottom: 1px solid $white;
+	color: unset;
+	border-bottom: 1px solid $white;
+}
+
+button {
+	border: 1px solid rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.1s; /* Safari */
+	transition-duration: 0.1s;
+	border-radius: 5px;
+	font-weight: bold;
+  box-shadow: none;
+  outline: none;
+}
+
+button:hover {
+	background-color: $grey;
+	color: $black;
+	box-shadow: 0px 2px 10px $white;
+}
+
+button:active {
+  box-shadow: 0px 1px 5px $white;
+  transform: translateY(2px);
 }
